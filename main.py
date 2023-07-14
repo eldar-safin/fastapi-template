@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import uvicorn
 from fastapi import FastAPI
+from sqlalchemy import create_engine
 
+engine = create_engine('sqlite+pysqlite:///:memory:', echo=True)
 
 app = FastAPI()
 
